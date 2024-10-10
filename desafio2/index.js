@@ -1,4 +1,4 @@
-function getRank(name,victories,defeats ){
+function getRank(victories,defeats ){
   let result = victories - defeats;
     if(result >= 101){
         return `O Herói tem de saldo de ${result}! está no nível de Imortal`;
