@@ -2,7 +2,7 @@ let name = " ";
 let xpQuantity = 0;
 
 function classifyHeroes(name,xpQuantity){
-    console.log(`Bem-vindo(a)${name}! `)
+  
     if(xpQuantity >= 100001){
         return `Olá ${name}! Seu nível é Radiante`;
     }else if(xpQuantity >= 9001 && xpQuantity <= 10000){
