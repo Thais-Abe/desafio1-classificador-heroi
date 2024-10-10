@@ -2,9 +2,7 @@
      nome;
      idade;
      tipo;
-     constructor(tipo){
-        this.tipo = tipo;
-     }
+
 
 atacar(heroi){
     let tipoDeAtaque = "";
@@ -24,5 +22,5 @@ atacar(heroi){
 
 }
 
-let heroi = new Heroe("mago");
+let heroi = new Heroe();
 console.log(heroi.atacar("monge"));
