@@ -1,6 +1,3 @@
-let name = " ";
-let xpQuantity = 0;
-
 function classifyLevelHeroes(name,xpQuantity){
   
     if(xpQuantity >= 100001){
@@ -22,3 +19,22 @@ function classifyLevelHeroes(name,xpQuantity){
     }
 }
 
+//2º modo de fazer
+const levels = {
+    100001: 'Radiante',
+    9001: 'Imortal',
+    8001: 'Ascendente',
+    7001: 'Platina',
+    6001: 'Ouro',
+    2001: 'Prata',
+    1001: 'Bronze',
+    0: 'Ferro'
+};
+
+function getLevel(xpQuantity, name) {
+    for (const xpThreshold in levels) {
+        if (xpQuantity >= xpThreshold) {
+            return `Olá ${name}! Seu nível é ${levels[xpThreshold]}`;
+        }
+    }
+}
