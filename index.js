@@ -1,7 +1,7 @@
 let name = " ";
 let xpQuantity = 0;
 
-function classifyHeroes(name,xpQuantity){
+function classifyLevelHeroes(name,xpQuantity){
   
     if(xpQuantity >= 100001){
         return `Olá ${name}! Seu nível é Radiante`;
