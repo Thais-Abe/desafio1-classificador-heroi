@@ -27,3 +27,7 @@ Se XP for maior ou igual a 10.001 = Radiante
 
 Ao final deve se exibir uma mensagem:
 "O Herói de nome **{nome}** seu nível é de **{nivel}**"
+
+## Diagrama
+
+![image](https://github.com/user-attachments/assets/a2f97ad9-b3dc-430d-a531-60aa5760164f)
