@@ -1,26 +1,35 @@
- class Heroe {
-     nome;
-     idade;
-     tipo;
+class Heroe {
+  nome;
+  idade;
+  tipo;
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
 
-
-atacar(heroi){
-    let tipoDeAtaque = "";
-    if(heroi === 'mago'){
-        tipoDeAtaque = "magia";
-    }else if(heroi === 'guerreiro'){
-        tipoDeAtaque = "espada";
-    }else if(heroi === 'monge'){
-        tipoDeAtaque = "artes marciais";
-    }else if( heroi === 'ninja'){
-        tipoDeAtaque = "shuriken";
-    }else{
-        return "Este heroi não faz parte deste jogo, tente novamente!"
+  obterTipoDeAtaque(tipo) {
+    switch (tipo) {
+      case "mago":
+        return "magia";
+      case "guerreiro":
+        return "espada";
+      case "monge":
+        return "artes marciais";
+      case "ninja":
+        return "shuriken";
+      default:
+        return null;
     }
-    return  `o ${this.tipo} atacou usando ${tipoDeAtaque}`;
-}
+  }
 
+  atacar(tipo) {
+    let tipoDeAtaque = this.obterTipoDeAtaque(tipo);
+    if (tipoDeAtaque) {
+      return `O ${this.tipo} atacou usando ${tipoDeAtaque}.`;
+    } else {
+      return "Este heroi não faz parte deste jogo, tente novamente!";
+    }
+  }
 }
-
-let heroi = new Heroe();
-console.log(heroi.atacar("monge"));
+module.exports = Heroe;
